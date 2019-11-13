@@ -12,6 +12,10 @@ export class MascotasService {
   public getMascotas() {
     return this.httpClient.get<Array<Mascota>>(`${this.baseUrl}`);
   }
+
+  public addMascota(mascota: Mascota){
+    return this.httpClient.post<Mascota>(`${this.baseUrl}`,mascota);
+  }
   
   constructor(private httpClient: HttpClient) {}
 

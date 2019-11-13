@@ -9,19 +9,25 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { MascotasListarComponent } from './components/mascotas-listar/mascotas-listar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MascotasService } from './services/mascotas.service';
+import { MascotasAgregarComponent } from './components/mascotas-agregar/mascotas-agregar.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    MascotasListarComponent
+    MascotasListarComponent,
+    MascotasAgregarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MascotasService],
   bootstrap: [AppComponent]
