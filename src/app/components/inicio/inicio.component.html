@@ -6,6 +6,6 @@
 
 <div class="clr-row clr-justify-content-center">
     <div class="clr-col-4">
-        <img src="/assets/img/panda.png" alt="imagen panda">
+        <img src="/assets/img/panda.png" alt="imagen panda" [ngClass]="{'animated swing': variable}" (mouseover)="cambiarEstado()">
     </div>
 </div>
