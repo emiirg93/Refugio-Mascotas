@@ -1,0 +1,9 @@
+td{
+    padding-top: 23px;
+}
+.icon-button{
+    margin: 0;
+}
+tr td:last-of-type{
+    padding-top: 10px;
+}

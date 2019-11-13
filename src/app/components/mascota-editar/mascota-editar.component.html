@@ -1,0 +1,32 @@
+<h1>Editar Mascota</h1>
+
+<form clrForm [formGroup]="editarMascota" (ngSubmit)="onSubmit()">
+    <clr-input-container>
+      <label>Nombre</label>
+      <input clrInput type="text" formControlName="nombre" />
+      <clr-control-helper>Ingrese el nombre de la mascota</clr-control-helper>
+      <clr-control-error>Debe ingresar el nombre de la mascota</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Tipo</label>
+      <input clrInput type="text" formControlName="tipo" />
+      <clr-control-helper>Ingrese el tipo de mascota</clr-control-helper>
+      <clr-control-error>Debe ingresar el tipo de mascota</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Edad</label>
+      <input clrInput type="number" min="1" max="120" formControlName="edad" />
+      <clr-control-helper>Ingrese la edad de la mascota</clr-control-helper>
+      <clr-control-error *ngIf="editarMascota">Debe ingresar una edad(solo numeros)</clr-control-error>
+      <clr-control-error></clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Descripcion</label>
+      <input clrInput type="text" size="50" formControlName="descripcion" />
+      <clr-control-helper>Escribe una descripcion sobre la mascota</clr-control-helper>
+      <clr-control-error>Debe escribir una descripcion de la mascota</clr-control-error>
+    </clr-input-container>
+  
+    <button class="btn btn-success" type="submit" [disabled]="!editarMascota.valid" >Actualizar</button>
+    <button class="btn btn-outline" (click)="volver($event)">Cancelar</button>
+  </form>

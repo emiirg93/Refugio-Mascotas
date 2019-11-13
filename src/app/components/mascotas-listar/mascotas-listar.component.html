@@ -11,6 +11,7 @@
             <th>Tipo</th>
             <th>Edad</th>
             <th>Descripcion</th>
+            <th>Accion</th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
             <td>{{item.tipo | capitalizado}}</td>
             <td>{{item.edad}}</td>
             <td>{{item.descripcion | capitalizado}}</td>
+            <td class="final"><button class="btn btn-icon icon-button" [routerLink]="['/editar',item.id]" routerLinkActive="router-link-active" ><clr-icon shape="pencil"></clr-icon></button></td>
         </tr>
     </tbody>
 </table>
