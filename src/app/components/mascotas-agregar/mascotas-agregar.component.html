@@ -26,9 +26,11 @@
   </clr-input-container>
 
   <button class="btn btn-success" type="submit" [disabled]="!agregarMascota.valid" >Agregar</button>
+  <button class="btn btn-primary" (click)="reset($event)">Limpiar</button>
+  <button class="btn btn-outline" (click)="volver($event)">Cancelar</button>
 </form>
 
-<button class="btn btn-primary" (click)="reset">Limpiar</button>
-<button class="btn btn-outline" [routerLink]="['/mascotas']">Cancelar</button>
+
+
 
   

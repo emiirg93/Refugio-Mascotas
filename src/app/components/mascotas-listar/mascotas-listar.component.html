@@ -1,7 +1,7 @@
 <h1>Mascotas Para Adoptar</h1>
 
 <button type="button" class="btn btn-icon btn-primary" aria-label="settings" [routerLink]="['/agregar']" >
-    <clr-icon shape="plus-circle"></clr-icon> Agregar Mascota
+    <i class="fas fa-plus-circle"></i> Agregar Mascota
 </button>
 
 <table class="table">
@@ -15,10 +15,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of mascotas">
-            <td>{{item.nombre}}</td>
-            <td>{{item.tipo}}</td>
+            <td>{{item.nombre | capitalizado}}</td>
+            <td>{{item.tipo | capitalizado}}</td>
             <td>{{item.edad}}</td>
-            <td>{{item.descripcion}}</td>
+            <td>{{item.descripcion | capitalizado}}</td>
         </tr>
     </tbody>
 </table>

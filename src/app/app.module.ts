@@ -12,6 +12,7 @@ import { MascotasService } from './services/mascotas.service';
 import { MascotasAgregarComponent } from './components/mascotas-agregar/mascotas-agregar.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     InicioComponent,
     MascotasListarComponent,
-    MascotasAgregarComponent
+    MascotasAgregarComponent,
+    CapitalizadoPipe
   ],
   imports: [
     BrowserModule,
