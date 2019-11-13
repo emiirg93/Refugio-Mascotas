@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
 import { MascotasService } from "src/app/services/mascotas.service";
 import { Mascota } from "../mascotas-listar/mascotas-listar.component";
-import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-mascota-editar",
@@ -43,7 +42,8 @@ export class MascotaEditarComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.params.subscribe(params => {
-     this.mascotaServices.getMascota(params["id"]).subscribe(data =>{
+     this.mascotaServices.getMascota(params["id"])
+     .subscribe(data =>{
        this.mascota = data ;
        this.editarMascota.setValue(this.mascota);
      });
