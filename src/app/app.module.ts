@@ -14,6 +14,7 @@ import { MascotasAgregarComponent } from "./components/mascotas-agregar/mascotas
 import { ReactiveFormsModule } from "@angular/forms";
 import { CapitalizadoPipe } from "./pipes/capitalizado.pipe";
 import { MascotaEditarComponent } from "./components/mascota-editar/mascota-editar.component";
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MascotaEditarComponent } from "./components/mascota-editar/mascota-edit
     MascotasListarComponent,
     MascotasAgregarComponent,
     CapitalizadoPipe,
-    MascotaEditarComponent
+    MascotaEditarComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

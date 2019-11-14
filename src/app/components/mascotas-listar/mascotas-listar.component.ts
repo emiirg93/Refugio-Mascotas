@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MascotasListarComponent implements OnInit {
 
   mascotas:Array<Mascota>=[];
+  loading:boolean;
   
   constructor(private mascotasService:MascotasService , private router:Router) { }
 
@@ -21,8 +22,10 @@ export class MascotasListarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loading = true;
     this.mascotasService.getMascotas().subscribe((data)=>{
       this.mascotas= data["mascotas"];
+      this.loading = false;
     })
   }
 
