@@ -1,4 +1,5 @@
-<h1>Editar Mascota</h1>
+<div class="animated fadeIn faster">
+  <h1>Editar Mascota</h1>
 
 <form clrForm [formGroup]="editarMascota" (ngSubmit)="onSubmit()">
     <clr-input-container>
@@ -30,3 +31,4 @@
     <button class="btn btn-success" type="submit" [disabled]="!editarMascota.valid" >Actualizar</button>
     <button class="btn btn-outline" (click)="volver($event)">Cancelar</button>
   </form>
+</div>

@@ -12,8 +12,8 @@ export class MascotasAgregarComponent implements OnInit {
 
 
   agregarMascota = this.fb.group({
-    nombre: ['', [Validators.required, Validators.pattern("[a-zA-ZñÑ]+")]],
-    tipo: ['', [Validators.required, Validators.pattern("[a-zA-ZñÑ]+")]],
+    nombre: ['', [Validators.required, Validators.pattern("[a-zA-ZñÑ ]+")]],
+    tipo: ['', [Validators.required, Validators.pattern("[a-zA-ZñÑ ]+")]],
     edad: ['', [Validators.required,Validators.pattern("^[0-9]$|^[0-9][0-9]$|^[0-9][0-9][0-9]$"), Validators.max(120),Validators.min(1)]],
     descripcion: ['', [Validators.required]]
   });

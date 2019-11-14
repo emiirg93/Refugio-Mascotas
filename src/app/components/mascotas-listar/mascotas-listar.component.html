@@ -1,29 +1,31 @@
-<h1>Mascotas Para Adoptar</h1>
+<div class="animated fadeIn faster">
+    <h1>Mascotas Para Adoptar</h1>
 
-<button type="button" class="btn btn-icon btn-primary" aria-label="settings" [routerLink]="['/agregar']" >
-    <i class="fas fa-plus-circle"></i> Agregar Mascota
-</button>
+    <button type="button" class="btn btn-icon btn-primary" aria-label="settings" [routerLink]="['/agregar']" >
+        <i class="fas fa-plus-circle"></i> Agregar Mascota
+    </button>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Edad</th>
-            <th>Descripcion</th>
-            <th>Accion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of mascotas">
-            <td>{{item.nombre | capitalizado}}</td>
-            <td>{{item.tipo | capitalizado}}</td>
-            <td>{{item.edad}}</td>
-            <td>{{item.descripcion | capitalizado}}</td>
-            <td class="final">
-                <button class="btn btn-icon icon-button" [routerLink]="['/editar',item.id]" ><clr-icon shape="pencil"></clr-icon></button>
-                <button class="btn btn-danger btn-icon icon-button" (click)="eliminar(item.id)" ><clr-icon shape="trash"></clr-icon></button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Edad</th>
+                <th>Descripcion</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of mascotas">
+                <td>{{item.nombre | capitalizado}}</td>
+                <td>{{item.tipo | capitalizado}}</td>
+                <td>{{item.edad}}</td>
+                <td>{{item.descripcion | capitalizado}}</td>
+                <td class="final">
+                    <button class="btn btn-icon icon-button" [routerLink]="['/editar',item.id]" ><clr-icon shape="pencil"></clr-icon></button>
+                    <button class="btn btn-danger btn-icon icon-button" (click)="eliminar(item.id)" ><clr-icon shape="trash"></clr-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

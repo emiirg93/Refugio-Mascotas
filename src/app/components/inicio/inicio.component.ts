@@ -10,13 +10,5 @@ export class InicioComponent implements OnInit {
 
   constructor() {}
 
-  cambiarEstado() {
-    if(this.variable == false){
-      this.variable = true;
-    }else{
-      this.variable = false;
-    }
-  }
-
   ngOnInit() {}
 }

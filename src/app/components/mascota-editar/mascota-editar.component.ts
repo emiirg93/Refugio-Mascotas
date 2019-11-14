@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
 import { MascotasService } from "src/app/services/mascotas.service";
-import { Mascota } from "../mascotas-listar/mascotas-listar.component";
 
 @Component({
   selector: "app-mascota-editar",
@@ -10,8 +9,6 @@ import { Mascota } from "../mascotas-listar/mascotas-listar.component";
   styleUrls: ["./mascota-editar.component.css"]
 })
 export class MascotaEditarComponent implements OnInit {
-
-  mascota:Mascota;
 
   editarMascota = this.fb.group({
     id: [""],
@@ -44,8 +41,7 @@ export class MascotaEditarComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
      this.mascotaServices.getMascota(params["id"])
      .subscribe(data =>{
-       this.mascota = data ;
-       this.editarMascota.setValue(this.mascota);
+       this.editarMascota.setValue(data["mascota"]);
      });
     });
   }
@@ -58,6 +54,6 @@ export class MascotaEditarComponent implements OnInit {
   }
   onSubmit() {
     this.mascotaServices.editMascota(this.editarMascota.value)
-    .subscribe(data => this.router.navigate(['/mascotas']));
+    .subscribe(data => {this.router.navigate(['/mascotas'])});
   }
 }

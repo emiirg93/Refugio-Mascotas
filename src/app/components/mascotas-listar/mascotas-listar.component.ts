@@ -16,13 +16,13 @@ export class MascotasListarComponent implements OnInit {
   eliminar(id:number){
     this.mascotasService.deleteMascota(id)
     .subscribe(data => {
-      this.mascotasService.getMascotas().subscribe(info => this.mascotas = info);
+      this.mascotasService.getMascotas().subscribe(info => this.mascotas = info["mascotas"]);
     });
   }
 
   ngOnInit() {
     this.mascotasService.getMascotas().subscribe((data)=>{
-      this.mascotas = data;
+      this.mascotas= data["mascotas"];
     })
   }
 
