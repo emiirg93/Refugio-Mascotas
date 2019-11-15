@@ -9,3 +9,24 @@ tr td:last-of-type{
     padding-top: 10px;
 }
 
+.separar{
+    margin-top: 100px;
+}
+
+span{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+span:last-of-type{
+    margin-right: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.swal2-popup {
+    font-size: 1.6rem !important;
+  }
+

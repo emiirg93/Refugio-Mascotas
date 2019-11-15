@@ -5,7 +5,7 @@
         <i class="fas fa-plus-circle"></i> Agregar Mascota
     </button>
 
-    <app-loading *ngIf="loading"></app-loading>
+    
 
     <table class="table">
         <thead>
@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of mascotas">
+            <tr *ngFor="let item of mascotas" >
                 <td>{{item.nombre | capitalizado}}</td>
                 <td>{{item.tipo | capitalizado}}</td>
                 <td>{{item.edad}}</td>
@@ -30,4 +30,14 @@
             </tr>
         </tbody>
     </table>
+    <div class="clr-row clr-justify-content-center separar" *ngIf="loading">
+        <div class="clr-col-6 clr-col-lg-2 flex">
+            <span class="spinner spinner-md">
+                
+            </span>
+            <span>
+                Cargando...
+            </span>
+        </div>
+    </div>
 </div>

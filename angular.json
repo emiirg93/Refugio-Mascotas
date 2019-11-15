@@ -28,10 +28,12 @@
               "node_modules/@clr/ui/clr-ui.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/animate.css/animate.min.css",
+              "node_modules/sweetalert2/dist/sweetalert2.min.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/sweetalert2/dist/sweetalert2.min.js",
               "node_modules/@clr/icons/clr-icons.min.js"
             ]
           },

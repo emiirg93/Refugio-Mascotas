@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, AbstractControl, FormBuilder } from "@angular/forms";
+import { Validators, FormBuilder } from "@angular/forms";
 import { MascotasService } from 'src/app/services/mascotas.service';
 import { Router } from '@angular/router';
 

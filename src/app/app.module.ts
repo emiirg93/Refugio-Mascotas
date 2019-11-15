@@ -15,6 +15,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { CapitalizadoPipe } from "./pipes/capitalizado.pipe";
 import { MascotaEditarComponent } from "./components/mascota-editar/mascota-editar.component";
 import { LoadingComponent } from './components/loading/loading.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     ClarityModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
   providers: [MascotasService],
   bootstrap: [AppComponent]
