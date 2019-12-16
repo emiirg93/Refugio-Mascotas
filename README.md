@@ -1,3 +1,3 @@
 # RefugioMascotas
-![Screenshot](screenshot.png)  
+![Screenshot](mascotas.png)  
 https://emiirg93.github.io/Refugio-Mascotas/
